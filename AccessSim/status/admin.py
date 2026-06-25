@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Leads
+from .models import Status
 
-admin.site.register(Leads)
+admin.site.register(Status)
 # Register your models here.

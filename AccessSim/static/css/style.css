@@ -1,0 +1,486 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333229;
+    background: #ebebed;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0;
+}
+
+a,
+nav h1 {
+    color: #e9e7da;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    width: 100%;
+}
+
+.section-description {
+    color: #333229;
+    opacity: 0.9;
+    line-height: 1.6;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    background: #333229;
+    padding: 15px 20px;
+}
+
+nav img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.subnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 12px 20px;
+    background-color: #037ffc;
+    border-radius: 0 0 12px 12px
+}
+
+.subnav a {
+    color: #e9e7da;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(95%, 1300px);
+}
+
+.introducao {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+    min-width: auto;
+}
+
+.intro-text,
+.about-text,
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 360px;
+}
+
+.hero-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    background-color: #f0f1f5;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.features-row,
+.info-cards {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.intro-text p,
+.about-text p,
+.how-it-works p,
+.step-content p,
+.faq-card p,
+.public-text p,
+.benefit-text p,
+.form-details p {
+    line-height: 1.6;
+    color: #333229;
+}
+
+.feature-card,
+.info-card,
+.step-card,
+.problem-card,
+.solution-card,
+.public-card,
+.benefit-card,
+.faq-card {
+    background: #f9f9fa;
+    border: 2px solid #acadb2;
+    border-radius: 12px;
+    color: #333229;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    width: 200px;
+    min-height: 120px;
+    text-align: center;
+}
+
+.info-card,
+.problem-card,
+.solution-card,
+.public-card,
+.benefit-card,
+.faq-card {
+    padding: 22px 24px;
+}
+
+.info-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+.cta-button {
+    width: fit-content;
+    font-size: 20px;
+    padding: 14px 28px;
+    background: #f4663a;
+    color: #e9e7da;
+    transition: background 0.25s ease;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background: #d9512d;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 54px;
+    height: 54px;
+    margin-right: 18px;
+    font-weight: 800;
+    background: #f4663a;
+    color: #e9e7da;
+    border-radius: 100%;
+}
+
+.steps-grid {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    gap: 20px;
+}
+
+.step-card {
+    display: flex;
+    flex-direction: row;
+    padding: 18px 16px;
+    gap: 16px;
+}
+
+.info-cards {
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+.problem-solution-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.benefit-card {
+    display: flex;
+    width: 100%;
+    gap: 18px;
+}
+
+.benefit-text {
+    width: calc(100% - 55px);
+}
+
+.public-icon,
+.benefit-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #c7c9d1;
+    border-radius: 8px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.public-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.public-card {
+    display: flex;
+    gap: 18px;
+}
+
+.public-text {
+    width: 100%;
+}
+
+form {
+    background-color: #333229;
+    width: 100%;
+    padding: 28px;
+    border-radius: 14px;
+    color: #e9e7da;
+}
+
+form label {
+    color: #e9e7da;
+    font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+    background-color: #f0ede4;
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #a7a69a;
+    color: #333229;
+    font-family: inherit;
+}
+
+form button {
+    background-color: #f4663a;
+    color: #e9e7da;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+form button:hover {
+    background-color: #d9512d;
+}
+
+.form-benefit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: #333229;
+}
+
+.benefit-example {
+    width: 25px;
+    height: 25px;
+    background-color: #c7c9d1;
+    border-radius: 4px;
+}
+
+.formulario-lead {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.form-details {
+    margin-bottom: 20px;
+}
+
+.faq-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+.problem-solution-card {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.site-footer {
+    width: 100%;
+    background: #333229;
+    color: #e9e7da;
+    padding: 24px 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.6;
+    color: #e9e7da;
+}
+
+@media (max-width: 1024px) {
+    .introducao {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        min-height: 260px;
+    }
+
+    .subnav {
+        justify-content: center;
+    }
+
+    .info-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subnav {
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    .steps-grid,
+    .benefits-grid,
+    .faq-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-solution-card {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-lead {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    .hero-frame {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .subnav {
+        gap: 10px;
+        padding: 12px 10px;
+    }
+
+    .subnav a {
+        font-size: 13px;
+    }
+
+    .cta-button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    nav img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-frame {
+        min-height: 180px;
+    }
+
+    .step-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .benefit-card,
+    .public-card {
+        flex-direction: column;
+    }
+
+    .public-icon,
+    .benefit-icon {
+        margin-right: 0;
+    }
+
+    .form-benefit {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
