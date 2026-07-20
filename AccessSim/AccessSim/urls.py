@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from leads.views import submit_lead
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('core.urls'))
+    path('home/', include('core.urls')),
+    path('submit-lead', submit_lead, name='submit_lead'),
 ]

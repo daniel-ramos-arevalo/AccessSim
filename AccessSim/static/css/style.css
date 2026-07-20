@@ -384,6 +384,21 @@ footer p {
     color: #e9e7da;
 }
 
+#form-message {
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
+
+.success {
+    color: greenyellow;
+}
+
+
+.error {
+    color: red;
+}
+
 @media (max-width: 1024px) {
     .introducao {
         grid-template-columns: 1fr;

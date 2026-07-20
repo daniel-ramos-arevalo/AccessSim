@@ -256,33 +256,27 @@
                 <div class="form-benefit"> <div class="benefit-example"></div>Desenvolvimento de novos projetos relacionados</div>
                 <div class="form-benefit"> <div class="benefit-example"></div>Descontos e promoções especiais de nossos produtos</div>
                 <div class="form-benefit"> <div class="benefit-example"></div>Atualizações de nossos termos e serviços</div>            </div>
-            <form action="/submit-lead" method="POST">
+            <form id="form-lead" action="/submit-lead" method="POST">
+                {% csrf_token %}
+                {{ lead_form.lead_name.label_tag }}<br>
+                {{ lead_form.lead_name }}<br><br>
 
-                <label for="name">Nome *</label><br>
-                <input placeholder="Nome Completo" type="text" id="name" name="name" required><br><br>
+                {{ lead_form.email.label_tag }}<br>
+                {{ lead_form.email }}<br><br>
 
-                <label for="email">Email *</label><br>
-                <input placeholder="emailexemplo@gmail.com" type="email" id="email" name="email" required><br><br>
+                {{ lead_form.telefone.label_tag }}<br>
+                {{ lead_form.telefone }}<br><br>
 
-                <label for="phone">Telefone</label><br>
-                <input placeholder="(00) 00000-0000" type="tel" id="phone" name="phone"><br><br>
+                {{ lead_form.lead_message.label_tag }}<br>
+                {{ lead_form.lead_message }}<br><br>
 
-                <label for="message">Mensagem</label><br>
-                <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
-
-                <label for="origin">Como nos encontrou? *</label><br>
-                <select id="origin" name="origin" required>
-                    <option value="" disabled selected>Selecione uma opção</option>
-                    <option value="google">Pesquisa Google</option>
-                    <option value="social_media">Mídia Social</option>
-                    <option value="referral">Amigo ou Conhecido</option>
-                    <option value="advertisement">Anúncio</option>
-                    <option value="other">Outro</option>
-                </select><br><br>
+                {{ lead_form.origin.label_tag }}<br>
+                {{ lead_form.origin }}<br><br>
 
                 <button type="submit">Se Inscrever</button>
-
+                <h1 id="form-message">Titulo</h1>
             </form>
+            
         </section>
 
         <section class="faq">
@@ -315,5 +309,6 @@
             <p>Informações, demonstrações e suporte técnico em breve. © 2026 AccessSim. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
