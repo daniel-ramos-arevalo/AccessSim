@@ -1,6 +1,11 @@
 const form = document.getElementById("form-lead");
 const message = document.getElementById("form-message");
 
+function scrollToComponent(component_id) {
+    const component = document.getElementById(component_id);
+    component?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function showMessage(text, isSuccess) {
     if (!message) {
         return;

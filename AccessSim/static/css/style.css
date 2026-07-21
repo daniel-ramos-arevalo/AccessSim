@@ -161,6 +161,8 @@ main {
     border: 2px solid #acadb2;
     border-radius: 12px;
     color: #333229;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, min-height 0.25s ease;
+    cursor: pointer;
 }
 
 .feature-card {
@@ -397,6 +399,51 @@ footer p {
 
 .error {
     color: red;
+}
+
+.feature-card:hover,
+.info-card:hover,
+.step-card:hover,
+.problem-card:hover,
+.solution-card:hover,
+.public-card:hover,
+.benefit-card:hover,
+.faq-card:hover {
+    background-color: #333229;
+    border-color: #ffffff;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+    transform: translateY(-6px) scale(1.01);
+}
+
+.feature-card:hover p,
+.feature-card:hover h2,
+.info-card:hover p,
+.info-card:hover h2,
+.step-card:hover p,
+.step-card:hover h1,
+.step-card:hover h3,
+.problem-card:hover p,
+.problem-card:hover h3,
+.solution-card:hover p,
+.solution-card:hover h3,
+.public-card:hover p,
+.public-card:hover h2,
+.benefit-card:hover p,
+.benefit-card:hover h3,
+.faq-card:hover p,
+.faq-card:hover h2 {
+    color: white;
+}
+
+.benefit-card:hover .benefit-icon,
+.public-card:hover .public-icon {
+    background-color: #f4663a;
+    transform: rotate(6deg) scale(1.06);
+}
+
+.step-card:hover .step-number {
+    background-color: #037ffc;
+    transition: background-color 0.2s ease;
 }
 
 @media (max-width: 1024px) {

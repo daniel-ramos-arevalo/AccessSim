@@ -16,13 +16,13 @@
 
     <header>
         <div class="subnav">
-            <a href="sobre.html">SOBRE</a>
-            <a href="#">COMO FUNCIONA</a>
-            <a href="#">SOLUÇÃO</a>
-            <a href="#">BENEFÍCIOS</a>
-            <a href="#">PÚBLICO-ALVO</a>
-            <a href="#">PORTFÓLIO</a>
-            <a href="faq.html">FAQ</a>
+            <a onclick="event.preventDefault(); scrollToComponent('sobre')" href="#sobre">SOBRE</a>
+            <a onclick="event.preventDefault(); scrollToComponent('funcionamento')" href="#">COMO FUNCIONA</a>
+            <a onclick="event.preventDefault(); scrollToComponent('solucao')" href="#">SOLUÇÃO</a>
+            <a onclick="event.preventDefault(); scrollToComponent('beneficios')" href="#">BENEFÍCIOS</a>
+            <a onclick="event.preventDefault(); scrollToComponent('publico')" href="#">PÚBLICO-ALVO</a>
+            <a onclick="event.preventDefault(); scrollToComponent('portfolio')" href="#">PORTFÓLIO</a>
+            <a onclick="event.preventDefault(); scrollToComponent('faq')" href="faq.html">FAQ</a>
         </div>
     </header>
 
@@ -31,7 +31,7 @@
             <div class="intro-text">
                 <h1>AccessSim, uma solução arquitetônica</h1>
                 <p>A AccessSim utiliza Inteligência Artificial para analisar projetos arquitetônicos, identificar não conformidades com a ABNT NBR 9050 e gerar relatórios técnicos automáticos.</p>
-                <button class="cta-button">Se inscrever</button>
+                <button onclick="scrollToComponent('formulario')" class="cta-button">Se inscrever</button>
 
                 <div class="features-row">
                     <div class="feature-card">
@@ -57,7 +57,7 @@
             </div>
         </section>
 
-        <section class="sobre">
+        <section id="sobre">
             <div class="about-text">
                 <h1 class="section-title">Sobre</h1>
                 <p>A AccessSim nasceu da união entre especialistas em tecnologia, arquitetura e acessibilidade com o propósito de tornar os espaços mais inclusivos para todos.</p>
@@ -77,7 +77,7 @@
             </div>
         </section>
 
-        <section class="funcionamento">
+        <section id="funcionamento">
             <div class="how-it-works">
                 <h1 class="section-title">Como Funciona</h1>
                 <p class="section-description">Veja os cinco passos do serviço: upload da planta, avaliação normativa, simulação de uso, relatório técnico e sugestões de adequação.</p>
@@ -129,7 +129,7 @@
             </div>
         </section>
 
-        <section class="solucao">
+        <section id="solucao">
             <h1 class="section-title">Solução</h1>
             <p class="section-description">Entenda como o AccessSim resolve problemas de inclusão, tempo e recursos com análises automáticas de projetos arquitetônicos.</p>
             <div class="problem-solution-grid">
@@ -171,7 +171,7 @@
             </div>
         </section>
 
-        <section class="beneficios">
+        <section id="beneficios">
             <h1 class="section-title">Beneficios</h1>
             <p class="section-description">As principais vantagens do serviço para quem busca melhorar a acessibilidade de forma rápida, segura e econômica.</p>
             <div class="benefits-grid">
@@ -220,7 +220,7 @@
             </div>
         </section>
 
-        <section class="publico">
+        <section id="publico">
             <h1 class="section-title">Publico Alvo</h1>
             <p class="section-description">Conheça o público que se beneficia do AccessSim: do setor público às construtoras, todos que desejam projetos acessíveis.</p>
             <div class="public-cards">
@@ -248,7 +248,7 @@
             </div>
         </section>
 
-        <section class="formulario-lead">
+        <section id="formulario" class="formulario-lead">
             <div class="form-details">
                 <h1>O que esperar da demonstração</h1>
                 <p>Ao se inscrever, você receberá atualizações pelo seu email sobre o AccessSim e suas atuais e futuras inovações, incluindo:</p>
@@ -279,7 +279,7 @@
             
         </section>
 
-        <section class="faq">
+        <section id="faq">
             <h1 class="section-title">FAQ</h1>
             <p class="section-description">Respostas diretas para perguntas frequentes sobre o funcionamento da ferramenta e o uso da ABNT NBR 9050.</p>
             <div class="faq-cards">
