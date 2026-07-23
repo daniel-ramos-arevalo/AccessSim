@@ -73,6 +73,13 @@ nav img {
     border-radius: 8px;
 }
 
+.section-title {
+    background-color:#037ffc;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
 .subnav {
     display: flex;
     flex-wrap: wrap;
@@ -258,7 +265,7 @@ main {
 .benefit-icon {
     width: 35px;
     height: 35px;
-    background-color: #c7c9d1;
+    background-color: #c7c9d100;
     border-radius: 8px;
     margin-right: 20px;
     flex-shrink: 0;
@@ -437,13 +444,20 @@ footer p {
 
 .benefit-card:hover .benefit-icon,
 .public-card:hover .public-icon {
-    background-color: #f4663a;
+    background-color: #ee7a57;
     transform: rotate(6deg) scale(1.06);
 }
 
 .step-card:hover .step-number {
     background-color: #037ffc;
     transition: background-color 0.2s ease;
+}
+
+svg {
+    width: 1.8em;
+    height: 1.8em;
+    vertical-align: middle;
+    margin-right: 0.1em;
 }
 
 @media (max-width: 1024px) {

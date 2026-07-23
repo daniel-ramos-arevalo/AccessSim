@@ -18,5 +18,5 @@ env/
 .DS_Store
 Thumbs.db
 
-# Static & Media (optional, depending on your setup)
+# Static & Media
 media/
