@@ -9,6 +9,7 @@ db.sqlite3
 venv/
 env/
 .venv/
+.venv2/
 
 # IDE
 .vscode/
