@@ -22,17 +22,16 @@ load_dotenv(BASE_DIR / '.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-nk@kg&0g0r8ll1bhf4wpsnmj3w0fvq-s&evt8n*v&^9rar%^^4'
+# This is where your Django project key goes. Set the value of it in a .env file. "DJANGO_KEY=YOUR_KEY"
+SECRET_KEY = os.getenv('DJANGO_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# Debug mode should only be True if the project in under production. Always set it to False when other people can access your website.
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,14 +76,18 @@ WSGI_APPLICATION = 'AccessSim.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-
+# This setup checks if the keys needed for the Postgres connection exist in the .env file.
+# If you're having trouble with connection, check if the names are EXACTLY the same in here and the .env file.
+# Make sure you installed the dependencies, specially psycopg2, from the requirements.txt since they're needed for the connection to work.
+# If you're having troubles with the psycopg2 dependencie not loading, try recreating a venv or run it without one. 
 db_engine = os.getenv('DB_ENGINE')
 if not db_engine:
     if os.getenv('DB_NAME') and os.getenv('DB_USER') and os.getenv('DB_PASSWORD'):
         db_engine = 'django.db.backends.postgresql'
+        print("DATABASE: Connection with Postgres successful")
     else:
         db_engine = 'django.db.backends.sqlite3'
-        print("CONNECTION WITH POSTGRES FAILED, USING SQLITE3")
+        print("DATABASE: Connection with Postgres failed, using SQLITE3 instead")
 
 DATABASES = {
     'default': {

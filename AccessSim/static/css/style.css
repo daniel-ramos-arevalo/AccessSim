@@ -44,6 +44,11 @@ section {
     opacity: 0.9;
     line-height: 1.6;
     text-align: center;
+    font-size: large;
+    margin: 10px;
+    background-color: #c7c9d1;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 button {

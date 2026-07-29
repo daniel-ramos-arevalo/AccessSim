@@ -84,7 +84,17 @@ python3 manage.py runserver
 
 Acesse `http://127.0.0.1:8000/` no navegador.
 A página padrão está definida como `http://127.0.0.1:8000/home`
-A página admin pode ser acessada com `http://127.0.0.1:8000/admin`
+
+### 6. Acesse a API ou Admin
+
+Para conseguir acesso ao gerenciamento de todas as tabelas com uma interface interativa, acesse `http://127.0.0.1:8000/admin` com as credenciais feitas ao utilizar o comando `python3 manage.py createsuperuser`
+
+As páginas de requisição da API podem ser acessadas apenas após o login como admin:
+- `http://127.0.0.1:8000/api` - root da API
+- `http://127.0.0.1:8000/api/schema` - schema completo como arquivo
+- `http://127.0.0.1:8000/api/docs` - documentação da API 
+
+Apenas requisições GET são permitidas nesta interface. A inserção de dados está reservada unicamente para o formulário e painel admin do Django.
 
 ## Ações para fazer o projeto funcionar em qualquer computador
 
