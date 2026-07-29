@@ -1,6 +1,6 @@
 # AccessSim
 
-> **README em construção**
+> **README**
 > Use este documento como guia inicial para configurar e executar o projeto.
 
 ## Objetivo do projeto
@@ -37,6 +37,7 @@ DB_USER=usuario_do_banco
 DB_PASSWORD=senha_do_banco
 DB_HOST=localhost
 DB_PORT=5432
+DJANGO_KEY=sua_chave
 ```
 
 O arquivo `AccessSim/main/settings.py` usa essas variáveis para conectar ao PostgreSQL.
@@ -85,7 +86,7 @@ python3 manage.py runserver
 Acesse `http://127.0.0.1:8000/` no navegador.
 A página padrão está definida como `http://127.0.0.1:8000/home`
 
-### 6. Acesse a API ou Admin
+### 7. Acesse a API ou Admin
 
 Para conseguir acesso ao gerenciamento de todas as tabelas com uma interface interativa, acesse `http://127.0.0.1:8000/admin` com as credenciais feitas ao utilizar o comando `python3 manage.py createsuperuser`
 
