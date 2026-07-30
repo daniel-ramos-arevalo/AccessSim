@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="../static/images/AccessSim.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AccessSim</title>
@@ -21,7 +22,7 @@
             <a onclick="event.preventDefault(); scrollToComponent('solucao')" href="#">SOLUÇÃO</a>
             <a onclick="event.preventDefault(); scrollToComponent('beneficios')" href="#">BENEFÍCIOS</a>
             <a onclick="event.preventDefault(); scrollToComponent('publico')" href="#">PÚBLICO-ALVO</a>
-            <a onclick="event.preventDefault(); scrollToComponent('portfolio')" href="#">PORTFÓLIO</a>
+            <a target="_blank" href="https://www.accesssim.com.br/#">PORTFÓLIO</a>
             <a onclick="event.preventDefault(); scrollToComponent('faq')" href="faq.html">FAQ</a>
         </div>
     </header>
@@ -30,8 +31,16 @@
         <section class="introducao">
             <div class="intro-text">
                 <h1>AccessSim, uma solução arquitetônica</h1>
+                
                 <p>A AccessSim utiliza Inteligência Artificial para analisar projetos arquitetônicos, identificar não conformidades com a ABNT NBR 9050 e gerar relatórios técnicos automáticos.</p>
-                <button onclick="scrollToComponent('formulario')" class="cta-button">Se inscrever</button>
+                <div class="introduction-buttons">
+                    <button onclick="scrollToComponent('formulario')" class="cta-button">Ver Demo</button>
+                    <button id="button-whatsapp">
+                        <a target="_blank" href="https://api.whatsapp.com/send/?phone=5579988737718&text=Ol%C3%A1%21+Tenho+interesse+em+uma+demo%2Fcontato.%0A%0ANome%3A+-%0AE-mail%3A+-%0A%0AMensagem%3A%0A-&type=phone_number&app_absent=0">
+                            Whatsapp
+                        </a>
+                    </button>
+                </div>
 
                 <div class="features-row">
                     <div class="feature-card">
@@ -135,7 +144,10 @@
             <h1 class="section-title">Solução</h1>
             <p class="section-description">Entenda como o AccessSim resolve problemas de inclusão, tempo e recursos com análises automáticas de projetos arquitetônicos.</p>
             <div class="problem-solution-grid">
-                <h2>Inclusão</h2>
+                <h2>
+                    <svg class="problem-solution-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13 20V18C13 15.2386 10.7614 13 8 13C5.23858 13 3 15.2386 3 18V20H13ZM13 20H21V19C21 16.0545 18.7614 14 16 14C14.5867 14 13.3103 14.6255 12.4009 15.6311M11 7C11 8.65685 9.65685 10 8 10C6.34315 10 5 8.65685 5 7C5 5.34315 6.34315 4 8 4C9.65685 4 11 5.34315 11 7ZM18 9C18 10.1046 17.1046 11 16 11C14.8954 11 14 10.1046 14 9C14 7.89543 14.8954 7 16 7C17.1046 7 18 7.89543 18 9Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    Inclusão
+                </h2>
                 <div class="problem-solution-card">
                     <div class="problem-card">
                         <h3>Problema</h3>
@@ -147,7 +159,10 @@
                     </div>
                 </div>
 
-                <h2>Tempo</h2>
+                <h2>
+                    <svg class="problem-solution-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 7V12L14.5 13.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    Tempo
+                </h2>
                 <div class="problem-solution-card">
                     <div class="problem-card">
                         <h3>Problema</h3>
@@ -159,7 +174,10 @@
                     </div>
                 </div>
 
-                <h2>Recursos</h2>
+                <h2>
+                    <svg class="problem-solution-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 7C16 6.07003 16 5.60504 15.8978 5.22354C15.6204 4.18827 14.8117 3.37962 13.7765 3.10222C13.395 3 12.93 3 12 3C11.07 3 10.605 3 10.2235 3.10222C9.18827 3.37962 8.37962 4.18827 8.10222 5.22354C8 5.60504 8 6.07003 8 7M14 11.5C13.5 11.376 12.6851 11.3714 12 11.376M12 11.376C11.7709 11.3775 11.9094 11.3678 11.6 11.376C10.7926 11.4012 10.0016 11.7368 10 12.6875C9.99825 13.7004 11 14 12 14C13 14 14 14.2312 14 15.3125C14 16.1251 13.1925 16.4812 12.1861 16.5991C11.3861 16.5991 11 16.625 10 16.5M12 11.376L12 10M12 16.5995V18M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V11.8C21 10.1198 21 9.27976 20.673 8.63803C20.3854 8.07354 19.9265 7.6146 19.362 7.32698C18.7202 7 17.8802 7 16.2 7H7.8C6.11984 7 5.27976 7 4.63803 7.32698C4.07354 7.6146 3.6146 8.07354 3.32698 8.63803C3 9.27976 3 10.1198 3 11.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    Recursos
+                </h2>
                 <div class="problem-solution-card">
                     <div class="problem-card">
                         <h3>Problema</h3>
@@ -293,7 +311,6 @@
                 <button type="submit">Se Inscrever</button>
                 <h1 id="form-message">Titulo</h1>
             </form>
-            
         </section>
 
         <section id="faq">
@@ -323,7 +340,15 @@
     <footer class="site-footer">
         <div class="footer-content">
             <p>AccessSim analisa seu projeto para melhorar a acessibilidade segundo a ABNT NBR 9050. Nossa missão é acelerar adequações e reduzir riscos com inteligência e clareza.</p>
-            <p>Informações, demonstrações e suporte técnico em breve. © 2026 AccessSim. Todos os direitos reservados.</p>
+            <p>
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z" fill="#ffffff"></path> </g></svg>
+                Whatsapp: +55 79 98873-7718
+            </p>
+            <p>
+                <svg class="footer-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 18L9 12M20 18L15 12M3 8L10.225 12.8166C10.8665 13.2443 11.1872 13.4582 11.5339 13.5412C11.8403 13.6147 12.1597 13.6147 12.4661 13.5412C12.8128 13.4582 13.1335 13.2443 13.775 12.8166L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                Email: faculdadebc1@gmail.com
+            </p>
+            <p>© 2026 AccessSim. Todos os direitos reservados.</p>
         </div>
     </footer>
     <script src="{% static 'js/main.js' %}"></script>
